@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">  
+  
+  <context:annotation-config />
+  
+    <bean id="color" class="com.sk.spring.Autowiring.Color">
+        <property name="baseColor" value="white" />
+        <property name="textureColor" value="grey" />
+    </bean>
+ 
+    <bean id="c" class="com.sk.spring.Autowiring.Cat">
+        <property name="name" value="cat" />
+        <property name="color" ref="color" />
+    </bean>
+    
+    <bean id="dog" class="com.sk.spring.Autowiring.Dog" autowire="byName">
+        <property name="name" value="dog" />
+    </bean>
+    
+    <bean id="elephant" class="com.sk.spring.Autowiring.Elephant" autowire="byType">
+        <property name="name" value="elephant" />
+    </bean>
+    
+    <bean id="frog" class="com.sk.spring.Autowiring.Frog" autowire="constructor">
+        <property name="name" value="frog" />
+    </bean>
+    
+    <bean id="tiger" class="com.sk.spring.Autowiring.Tiger">
+        <property name="name" value="tiger" />
+    </bean>
+</beans> 

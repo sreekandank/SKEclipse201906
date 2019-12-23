@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="bootstrap.min.css"/>
+    </head>
+<body>
+<div class="jumbotron col-md-4" >
+<form method="post" action="stud_insert_db.jsp">
+    <div class="form-group">
+        <label>RollNo:</label>
+        <input type="text" name="rno" class="form-control" >
+    </div>
+    <div class="form-group">
+        <label>Student Name:</label>
+        <input type="text" name="stud_name" class="form-control" placeholder="Enter Name" required>
+    </div>
+    <div class="form-group">
+        <label>Department:</label>
+        <input type="text" name="dept" class="form-control" placeholder="Enter Department" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button> 
+</form>
+</div>
+</body>
+</html>

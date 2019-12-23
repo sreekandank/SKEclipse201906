@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">  
+  
+    <bean id="color" class="com.sk.spring.Autowiring.Color">
+        <property name="baseColor" value="white" />
+        <property name="textureColor" value="grey" />
+    </bean>
+ 
+    <bean id="c" class="com.sk.spring.Autowiring.Cat">
+        <property name="name" value="cat" />
+        <property name="color" ref="color" />
+    </bean>
+</beans> 

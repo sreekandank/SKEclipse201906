@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script src = "js/angular.min.js">
+</script>
+</head>
+<body>
+<div ng-app = "mainApp" ng-controller = "studentController">
+Enter first name: <input type = "text" ng-model = "student.firstName"><br>
+<br>
+Enter last name: <input type = "text" ng-model = "student.lastName"><br>
+<br>
+You are entering: {{student.fullName()}}
+</div>
+<script>
+var mainApp = angular.module("mainApp", []);
+mainApp.controller('studentController', function($scope) {
+$scope.student = {
+firstName: "Sreekandan",
+lastName: "K",
+fullName: function() {
+var studentObject;
+studentObject = $scope.student;
+return studentObject.firstName + " " + studentObject.lastName;
+}
+};
+});
+</script>
+</body>
+</html>
